@@ -1,0 +1,23 @@
+{
+  "name": "TP3",
+  "main": "app/app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@nativescript/core": "~8.8.0",
+    "@nativescript/theme": "^3.1.0",
+    "axios": "^0.18.1",
+    "nativescript-vue": "~2.9.3",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@nativescript/android": "8.8.6",
+    "@nativescript/webpack": "~5.0.0",
+    "nativescript-vue-template-compiler": "~2.9.3",
+    "nodemon": "^3.1.9"
+  }
+}
