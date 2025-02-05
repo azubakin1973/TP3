@@ -18,6 +18,7 @@
     "@nativescript/android": "8.8.6",
     "@nativescript/webpack": "~5.0.0",
     "nativescript-vue-template-compiler": "~2.9.3",
+    "node-sass": "^9.0.0",
     "nodemon": "^3.1.9"
   }
 }

@@ -26,3 +26,8 @@ typings/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Microsoft Office temporary files
+~$*.docx
+~*.tmp
+*.docx
