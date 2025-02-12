@@ -9,7 +9,15 @@
  */
 <template>
   <Page>
-    <ActionBar :title="'Tasks from ' + userName" />
+    <ActionBar :title="'Tasks from ' + userName">
+      <ActionItem 
+        icon="res://user"
+        text="Profile"
+        @tap="showUserProfile"
+        ios.position="right"
+        android.position="right"
+      />
+    </ActionBar>
     <GridLayout rows="auto, auto, *">
       <!-- Section d'informations utilisateur -->
       <StackLayout row="0" backgroundColor="#f0f0f0" padding="10">
@@ -100,9 +108,10 @@
 
 <script>
 import { ApplicationSettings } from "@nativescript/core";
-import { confirm } from "@nativescript/core/ui/dialogs";
+import { confirm, alert, prompt } from "@nativescript/core/ui/dialogs";
 import Login from "./Login.vue";
 import axios from "axios";
+import UserProfile from "./UserProfile.vue";
 
 export default {
   /**
@@ -352,6 +361,13 @@ export default {
         default:
           return 'En cours';
       }
+    },
+    /**
+     * Affiche les détails de l'utilisateur dans un dialog
+     * Permet de visualiser et potentiellement modifier les informations
+     */
+    showUserProfile() {
+      this.$navigateTo(UserProfile);
     },
   },
 };

@@ -1,62 +1,120 @@
 # Application Mobile de Gestion de Tâches
 
-Cette application mobile multiplateforme a été développée avec NativeScript-Vue, permettant une gestion efficace des tâches personnelles avec authentification utilisateur.
+## Description Générale
+Cette application mobile multiplateforme développée avec NativeScript-Vue offre une solution complète de gestion de tâches personnelles avec authentification sécurisée.
 
 ## Prérequis
 
-Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
+### Environnement de Développement
+- Node.js (version LTS recommandée)
+- NativeScript CLI
+- Git
+- Éditeur de code (VS Code recommandé)
 
-- [Node.js](https://nodejs.org/) (version LTS recommandée)
-- [NativeScript CLI](https://docs.nativescript.org/setup/)
-- Android Studio (pour le développement Android)
-- Xcode (pour le développement iOS, Mac uniquement)
+### Installations Requises par Plateforme
 
+#### Pour Android
+- Android Studio
+- SDK Android
+- Java Development Kit (JDK)
 
-## Configuration de l'environnement de développement
+#### Pour iOS (Mac uniquement)
+- Xcode
+- Outils en ligne de commande Xcode
+- CocoaPods
+
+## Installation du Projet
+
+### 1. Clonage du Dépôt
+```bash
+git clone https://github.com/azubakin1973/TP3.git
+cd TP3
+```
+
+### 2. Installation des Dépendances
+```bash
+npm install
+ns prepare
+```
+
+## Configuration de l'Environnement
 
 ### Android
 1. Installez Android Studio
-2. Installez le SDK Android
-3. Configurez les variables d'environnement ANDROID_HOME et JAVA_HOME
-4. Créez un émulateur Android via Android Studio ou connectez un appareil physique
+2. Configurez les variables d'environnement :
+   - `ANDROID_HOME` vers le dossier SDK Android
+   - `JAVA_HOME` vers votre installation JDK
+3. Créez un émulateur via Android Studio ou utilisez un appareil physique
 
 ### iOS (Mac uniquement)
 1. Installez Xcode depuis l'App Store
-2. Installez les outils en ligne de commande Xcode
-3. Installez xcodeproj (`sudo gem install xcodeproj`)
+2. Installez les outils en ligne de commande :
+   ```bash
+   xcode-select --install
+   ```
+3. Installez CocoaPods :
+   ```bash
+   sudo gem install cocoapods
+   ```
 
-## Lancement de l'application
+## Lancement de l'Application
 
-### Pour le développement
+### Mode Développement
 ```bash
-ns run android  # Pour Android
-ns run ios      # Pour iOS (Mac uniquement)
+# Pour Android
+ns run android
+
+# Pour iOS (Mac uniquement)
+ns run ios
 ```
 
-### Pour la production
+### Mode Production
 ```bash
-ns build android --release  # Pour Android
-ns build ios --release      # Pour iOS (Mac uniquement)
+# Build Android
+ns build android --release
+
+# Build iOS (Mac uniquement)
+ns build ios --release
 ```
 
-## Fonctionnalités principales
+## Fonctionnalités Principales
 
 ### 1. Inscription (Register)
-- Création d'un nouveau compte utilisateur
+- Création de compte utilisateur
 - Validation des champs de formulaire
-- Stockage sécurisé des informations utilisateur
+- Stockage sécurisé des informations personnelles
+- Gestion des erreurs d'inscription
 
 ### 2. Connexion (Login)
 - Authentification sécurisée
+- Validation des identifiants
 - Gestion des sessions utilisateur
-- Récupération des informations de connexion
+- Protection contre les tentatives de connexion multiples
 
-### 3. Gestion des tâches
-- Affichage de la liste des tâches
-- Ajout de nouvelles tâches
+### 3. Gestion des Tâches
+- Création de nouvelles tâches
 - Modification des tâches existantes
-- Suppression des tâches
+- Suppression de tâches
 - Marquage des tâches comme complétées
+- Filtrage et tri des tâches
+
+## Dépendances Principales
+- NativeScript-Vue (~2.9.3)
+- Vue Router (^4.5.0)
+- Axios (^0.18.1)
+
+## Dépannage
+- Assurez-vous que toutes les variables d'environnement sont correctement configurées
+- Vérifiez que les versions des outils correspondent aux prérequis
+- En cas de problème, consultez la documentation NativeScript
+
+## Informations du Projet
+**Auteur:** Alexei de Moraes Zubakin  
+**Lieu:** Montreal-QC  
+**Date:** 30 janvier 2025
+
+
+
 
 ## Structure du projet
 
@@ -76,13 +134,6 @@ TP3/
 - @nativescript/core (~8.8.0)
 - Vue Router (^4.5.0)
 - Axios (^0.18.1)
-
-
-## Informations
-
-**Auteur:** Alexei de Moraes Zubakin  
-**Lieu:** Montreal-QC  
-**Date:** 30 janvier 2025
 
 
 
